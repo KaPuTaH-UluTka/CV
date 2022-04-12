@@ -6,6 +6,7 @@
   <title>Alexei Skutov</title>
   <link rel="icon" href="/assets/content/images/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./assets/css/fonts.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -111,7 +112,7 @@
             Recent projects
           </h2>
           <div class="projects__wrapper">
-            <article class="projects__item">
+            <article class="projects__item" data-aos='fade-right'>
               <a class="projects__link" href="https://rslang-personagrata9.netlify.app/" target="_blank">
                 <img class="projects__img" src="./assets/content/images/rslang.jpg" alt="">
                 <div class="projects__content">
@@ -126,7 +127,7 @@
                 </div>
               </a>
             </article>
-            <article class="projects__item">
+            <article class="projects__item" data-aos="fade-left">
               <a class="projects__link" href="https://rolling-scopes-school.github.io/kaputah-ulutka-JSFE2021Q3/art-quiz/" target="_blank">
                 <img class="projects__img" src="./assets/content/images/art.jpg" alt="">
                 <div class="projects__content">
@@ -141,7 +142,7 @@
                 </div>
               </a>
             </article>
-            <article class="projects__item">
+            <article class="projects__item" data-aos="fade-right">
               <a class="projects__link" href="https://rolling-scopes-school.github.io/kaputah-ulutka-JSFE2021Q3/momentum/" target="_blank">
                 <img class="projects__img" src="./assets/content/images/momentum.jpg" alt="">
                 <div class="projects__content">
@@ -156,7 +157,7 @@
                 </div>
               </a>
             </article>
-            <article class="projects__item">
+            <article class="projects__item" data-aos="fade-left">
               <a class="projects__link" href="https://rolling-scopes-school.github.io/kaputah-ulutka-JSFE2021Q3/museum-adaptive/" target="_blank">
                 <img class="projects__img" src="./assets/content/images/museum.jpg" alt="">
                 <div class="projects__content">
@@ -275,6 +276,10 @@
       </div>
     </footer>
   </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="script.js"></script>
   <script src="toggle.js"></script>
 </body>

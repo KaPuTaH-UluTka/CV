@@ -10,8 +10,6 @@
   --linkedin-bg: rgba(40, 103, 178, 0.35);
   --github: #6E5494;
   --github-bg: rgba(110, 84, 148, 0.35);
-  --codepen: rgba(255, 255, 255, 0.65);
-  --codepen-bg: rgba(255, 255, 255, 0.15);
   --max-width: 1440px;
   --content-width: 1238px;
 }
@@ -22,12 +20,10 @@
   --white: #F8F0E4;
   --text: #311996;
   --accent: #56a1db;
-  --accent2: #311996;
+  --accent2: linear-gradient(0deg, #56a1db 0%, #311996 100%);
   --linkedin: #2867B2;
   --github: #c9510c;
   --github-bg: rgba(201, 81, 12, 0.35);
-  --codepen: #12100B;
-  --codepen-bg: rgba(18, 16, 11, 0.35);
 }
 
 * {
@@ -443,10 +439,6 @@ button {
   fill: var(--linkedin);
 }
 
-.codepen path {
-  fill: var(--codepen);
-}
-
 .about-me .contact-links__link {
   display: flex;
   justify-content: center;
@@ -469,11 +461,6 @@ button {
 .about-me .linkedin .contact-links__link {
   border-radius: 50%;
   border-color: var(--linkedin-bg);
-}
-
-.about-me .codepen .contact-links__link {
-  border-radius: 50%;
-  border-color: var(--codepen-bg);
 }
 
 .about-me .about-me__description {
@@ -559,14 +546,6 @@ button {
   margin-bottom: 68px;
   max-width: 100%;
   border-radius: 10px;
-}
-
-.projects__item:nth-child(odd) {
-  transform: translateX(25px);
-}
-
-.projects__item:nth-child(even) {
-  transform: translateX(-25px);
 }
 
 .projects__link {
@@ -700,13 +679,6 @@ button {
   transform: translateY(50%);
 }
 
-.facts__list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 28px;
-  grid-template-rows: repeat(2, auto);
-}
-
 .languages__list {
   display: grid;
   column-gap: 28px;
@@ -783,40 +755,6 @@ button {
   font-size: 24px;
 }
 
-pre {
-  width: 100%;
-  padding-left: 0;
-  white-space: normal;
-  display: flex;
-  justify-content: center;
-}
-
-.contact-me__title {
-  margin-bottom: 1rem;
-}
-
-.contact-me__text {
-  margin-bottom: 2rem;
-}
-
-.form {
-  margin: 0 auto;
-  width: 100%;
-}
-
-.form-wrapper {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.required {
-  color: var(--white);
-}
-
-.form__group {
-  margin-bottom: 34px;
-}
-
 input, textarea {
   display: block;
   width: 100%;
@@ -825,22 +763,6 @@ input, textarea {
   border: none;
   border-bottom: 2px solid var(--white);
   background-color: transparent;
-}
-
-textarea {
-  height: 5rem;
-  width: 100%;
-  max-width: 100%;;
-  border: none;
-  border-bottom: 2px solid var(--white);
-}
-
-input:hover, textarea:hover {
-  border-bottom: 2px solid var(--white);
-}
-
-input:focus, textarea:focus {
-  border-bottom: 2px solid var(--white);
 }
 
 .page-footer {
@@ -928,20 +850,14 @@ input:focus, textarea:focus {
   }
 
   .about-me .contact-links__item.github {
-    top: calc(50% - 20rem);
-    right: 20rem;
+    top: calc(70% - 20rem);
+    right: 15rem;
     animation-delay: 0.5s;
   }
 
   .about-me .contact-links__item.linkedin {
     top: calc(50% - 8rem);
     left: 14rem;
-  }
-
-  .about-me .contact-links__item.codepen {
-    top: calc(50% - 4rem);
-    right: 10rem;
-    animation-direction: alternate-reverse;
   }
 
   .about-me .contact-links__link {
@@ -959,12 +875,6 @@ input:focus, textarea:focus {
     border-radius: 50%;
     border-color: var(--linkedin-bg);
     transform: translateX(-50%) translateY(-50%);
-  }
-
-  .about-me .codepen .contact-links__link {
-    border-radius: 50%;
-    border-color: var(--codepen-bg);
-    transform: translateX(50%) translateY(-50%);
   }
 
   .about-me .contact-links__link:hover {
@@ -1209,10 +1119,6 @@ input:focus, textarea:focus {
     font-size: 16px;
   }
 
-  .facts__quantity {
-    font-size: 56px;
-  }
-
   .languages__list {
     column-gap: 20px;
   }
@@ -1244,25 +1150,8 @@ input:focus, textarea:focus {
     column-gap: 34px;
   }
 
-  .facts__list {
-    column-gap: 0;
-  }
-
-  .facts__quantity {
-    font-size: 48px;
-  }
-
-  .facts__desc,
-  .languages__level {
-    font-size: 16px;
-  }
-
   .languages__list{
     column-gap: 0;
-  }
-
-  .video__player {
-    height: 45vmax;
   }
 }
 
@@ -1274,22 +1163,6 @@ input:focus, textarea:focus {
   .about-me__name {
     font-size: 24px;
   }
-
-  .languages__list,
-  .facts__list {
-    display: block;
-    columns: 2;
-  }
-
-  .facts__desc {
-    margin-bottom: 24px;
-  }
-
-  .facts__desc:nth-of-type(even),
-  .languages__level:nth-of-type(even) {
-    margin-bottom: 0;
-  }
-
 
   .languages__title {
     line-height: 2;
@@ -1358,19 +1231,6 @@ input:focus, textarea:focus {
 
   .experience__year::before {
     top: -16px;
-  }
-
-  .facts__quantity {
-    font-size: 48px;
-    line-height: 1;
-  }
-
-  .video__player {
-    height: 50vmax;
-  }
-
-  .form {
-    padding: 2rem 1rem;
   }
 
   .page-footer__inner {
